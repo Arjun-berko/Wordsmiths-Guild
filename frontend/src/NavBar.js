@@ -5,7 +5,7 @@ import useAuthenticated from './useAuthenticated';
 
 export default function NavigationBar() {
 
-    const {token,isAuthenticated} = useAuthenticated();
+    const {token,isAuthenticated,username} = useAuthenticated();
 
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
@@ -23,6 +23,12 @@ export default function NavigationBar() {
           </LinkContainer>
           {isAuthenticated? 
           <>
+          <LinkContainer to={`/userprofile/${username}`} >
+          <Nav.Link> My Profile </Nav.Link>
+          </LinkContainer>
+          <LinkContainer to={`/userpost/${username}`} >
+          <Nav.Link> My Posts </Nav.Link>
+          </LinkContainer>
           <LinkContainer to="/post/create">
           <Nav.Link>Create Post</Nav.Link>
           </LinkContainer>

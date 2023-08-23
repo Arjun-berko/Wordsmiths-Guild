@@ -16,3 +16,4 @@ class PostSerializer(serializers.ModelSerializer):
         return Post.objects.create(**validated_data)
 
 
+

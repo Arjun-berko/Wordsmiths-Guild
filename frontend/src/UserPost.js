@@ -33,6 +33,7 @@ export default function PostList() {
                 <Card.Text>{post.content}</Card.Text>
                 <Card.Footer className="text-muted">
                   <small>{new Date(post.date_created).toLocaleString()}</small><br/>
+                  <small> <Link to={`/post/delete/${post.id}`} > Delete this post </Link> </small>
                 </Card.Footer>
               </Card.Body>
             </Card>

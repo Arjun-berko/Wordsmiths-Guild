@@ -13,10 +13,9 @@ class AppUser(AbstractUser):
 
 class UserProfile(models.Model):
     name=models.CharField(max_length=500)
-    image=models.ImageField()
+    image=models.ImageField(upload_to="images",default="images/big-dog.png")
     profile_intro=models.TextField()
-    owner=models.OneToOneField(User,on_delete=models.CASCADE)
-
+    owner=models.OneToOneField(AppUser,on_delete=models.CASCADE)
 
 
 

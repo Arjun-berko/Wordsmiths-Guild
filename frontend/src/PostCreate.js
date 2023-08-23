@@ -23,7 +23,7 @@ export default function PostCreate() {
     }
 
     const onEnter = (event) => {
-        // event.preventDefault();
+        event.preventDefault();
         const finalPost= {...post};
         finalPost["author_username"]=username
 
@@ -35,13 +35,12 @@ export default function PostCreate() {
             },
             body: JSON.stringify(finalPost)
         })
-        .then(response => {
-            if (response.ok) {
-                console.log("Your data has been posted successfully!")
-                alert("Your data has been posted successfully!!!")
-            }
+        .then(response => response.json())
+        .then(data => {
+            console.log("Your data has been posted successfully!", data);
+            alert("Your data has been posted successfully!!!");
         })
-        .catch(error=>alert(error))
+        .catch(error => alert(error))
 
     }
 
