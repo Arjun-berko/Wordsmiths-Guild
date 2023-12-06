@@ -14,6 +14,7 @@ import UserProfile from './UserProfile';
 import PostDelete from './PostDestroy';
 import PostUpdate from './PostUpdate';
 import Register from './Register';
+import ProfileUpdate from './ProfileUpdate';
 
 
 
@@ -29,10 +30,11 @@ export default function App() {
           <Route path="/post/update/:id" element= {< PostUpdate />} />
           <Route path="/userpost/:username" element= {< UserPost />} />
           <Route path="/userprofile/:username" element= {< UserProfile />} />
+          <Route path="/userprofile/update/:username" element= {< ProfileUpdate />} />
           <Route path="/register" element={<Register />} />
           <Route path="/logout" element={<LogOut />} />
           <Route path="/trial" element={< Trial /> } />
-          <Route path="/post/list" element={< PostList />} />
+          <Route path="" element={< PostList />} />
           <Route path="/login" element={< Login />} />
         </Routes>
       </div>

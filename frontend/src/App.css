@@ -1,20 +1,8 @@
 .App {
-    color:blue;
+    color:black;
     text-align:center
 }
 
-/* h2 {
-    color:red !important; 
-}
-
-p {
-    color:orange;
-    
-}
-
-h1 {
-    color:red !important;
-} */
 
 .navbar {
     display: flex;
@@ -36,3 +24,378 @@ h1 {
     background-color: #d71a1a; /* Slightly lighter text color on hover */
   }
   
+
+
+
+/* Logout.js Styles */
+/* ... Existing styles ... */
+
+.logout-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.logout-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.logout-button {
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* UserProfile page */
+
+/* ... Existing styles ... */
+
+/* Styles for UserProfile Page */
+.user-profile-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin-top: 50px;
+    transition: transform 0.3s;
+}
+
+.user-profile-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-image-container {
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 2px solid #007BFF;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    margin-top: 24px;
+}
+
+.profile-title {
+    font-weight: 600;
+    color: #333;
+    margin-top: 12px;
+    font-size: 1.5em;
+}
+
+.profile-subtitle {
+    color: #007BFF;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.profile-text {
+    margin-top: 12px;
+    color: #666;
+}
+
+.profile-update-link {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #007BFF;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.profile-update-link:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Profile Update page */
+
+/* ... Existing styles ... */
+
+.update-form {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.update-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.update-form input[type="text"],
+.update-form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+
+
+.update-form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 25px;  /* Added for spacing */
+}
+
+.update-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.update-form .custom-file-input {
+    display: inline-block;
+    background-color: #f2f2f2;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%; 
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.update-form .custom-file-input input[type="file"] {
+    display: none;  /* Hide the default file input */
+}
+
+
+/* Post Detail Styles */
+
+/* Post Detail Styles */
+
+.post-detail-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.post-detail-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.post-detail-container h3 {
+    font-size: 1.2em;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.post-detail-container div {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-top: 30px;
+    word-wrap: break-word;
+}
+
+.post-detail-container small {
+    display: block;
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+
+.post-detail-container small a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s;
+}
+
+.post-detail-container small a:hover {
+    color: #0056b3;
+}
+
+.post-actions {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+.post-actions a {
+    margin-left: 15px;
+    color: #007BFF;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.post-actions a:hover {
+    color: #0056b3;
+}
+
+
+Post Update Styles
+
+.post-update-form {
+    max-width: 800px; /* Increased width for better editing */
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.post-update-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.post-update-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.post-update-form .quill-container {
+    margin-bottom: 20px;
+}
+
+.post-update-form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.post-update-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+  /* For the post create page */
+
+  
+  .create-form-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    margin-top: 50px;
+}
+
+.create-form-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.create-form-label {
+    font-weight: 500;
+    color: #555;
+}
+
+.create-submit-button {
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.create-submit-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* For the Post Delete page */
+
+.delete-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.delete-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.delete-btn {
+    padding: 10px 20px;
+    background-color: #FF0000; /* Red background */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #B30000; /* Darker red on hover */
+}
+
+
+
+/* Login page styles */
+
+.login-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin-top: 50px;
+    transition: transform 0.3s;
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+

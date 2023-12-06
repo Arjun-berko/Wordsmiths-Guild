@@ -1,66 +1,43 @@
-// import { useState,useEffect } from "react";
-// import { useParams } from "react-router-dom";
-
-// export default function UserProfile() {
-//     const [userData,setUserData] = useState({})
-//     const {username} = useParams()
-
-//     useEffect(()=>{
-//         fetch(`http://localhost:8000/users/profile/${username}`)
-//         .then(response => response.json())
-//         .then(data => setUserData(data))
-//         .catch(error => console.error("What happened here?"))
-//     })
-
-//     return(
-//         <>
-//             <h1> {userData.name} </h1>
-//             <h1> {userData.profile_intro} </h1>
-//             <h1> {userData.owner} </h1>
-//             <img src={userData.image} />
-//         </>
-//     )
-
-// }
-
-
+import useAuthenticated from "./useAuthenticated";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Card, Container, Row, Col, Image } from "react-bootstrap";
+import { FaEdit } from 'react-icons/fa'; // Importing the edit icon from react-icons
+
 
 export default function UserProfile() {
-  const [userData, setUserData] = useState({});
-  const { username } = useParams();
+    const [userData, setUserData] = useState({});
+    const { username: routeUsername } = useParams();
+    const { isAuthenticated, username } = useAuthenticated()
 
-  useEffect(() => {
-    fetch(`http://localhost:8000/users/profile/${username}`)
-      .then((response) => response.json())
-      .then((data) => setUserData(data))
-      .catch((error) => console.error("What happened here?"));
-  });
+    useEffect(() => {
+        fetch(`http://localhost:8000/users/profile/${routeUsername}`)
+            .then((response) => response.json())
+            .then((data) => setUserData(data))
+            .catch((error) => console.error("What happened here?"));
+    });
 
-  return (
-    <Container>
-      <Row className="justify-content-center mt-4">
-        <Col md={8}>
-          <Card>
-            <Card.Body>
-              <Row>
-                <Col md={4}>
-                  <Image src={userData.image} roundedCircle fluid />
-                </Col>
+    return (
+        <Container>
+            <Row className="justify-content-center mt-4">
                 <Col md={8}>
-                  <Card.Title>{userData.name}</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
-                    {userData.owner}
-                  </Card.Subtitle>
-                  <Card.Text>{userData.profile_intro}</Card.Text>
+                    <div className="user-profile-card">
+                        <div className="profile-image-container">
+                            <Image src={userData.image} className="profile-image" />
+                        </div>
+                        <div className="profile-info">
+                            <h2 className="profile-title">{userData.name}</h2>
+                            <h6 className="profile-subtitle">{userData.owner}</h6>
+                            <p className="profile-text">{userData.profile_intro}</p>
+                            {isAuthenticated && username === userData.owner &&
+                                <Link to={`/userprofile/update/${username}`} className="profile-update-link">
+                                    Update Profile
+                                </Link>
+                            }
+                        </div>
+                    </div>
                 </Col>
-              </Row>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
-  );
+            </Row>
+        </Container>
+    );
 }

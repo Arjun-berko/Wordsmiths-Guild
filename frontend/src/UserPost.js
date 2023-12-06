@@ -30,10 +30,10 @@ export default function PostList() {
             <Card key={post.id} className="mb-4 shadow-sm">
               <Card.Body>
                 <Card.Title> <Link to={`/post/${post.id}`}> {post.title} </Link> </Card.Title>
-                <Card.Text>{post.content}</Card.Text>
+                <Card.Text dangerouslySetInnerHTML={{ __html: post.content }} ></Card.Text>
                 <Card.Footer className="text-muted">
                   <small>{new Date(post.date_created).toLocaleString()}</small><br/>
-                  <small> <Link to={`/post/delete/${post.id}`} > Delete this post </Link> </small>
+                  {/* <small> <Link to={`/post/delete/${post.id}`} > Delete this post </Link> </small> */}
                 </Card.Footer>
               </Card.Body>
             </Card>
